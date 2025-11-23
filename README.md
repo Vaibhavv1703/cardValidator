@@ -2,15 +2,12 @@
 
 Lightweight vanilla JavaScript credit/debit card number validator and brand detector. It formats input as you type, identifies the card network (Visa, MasterCard, American Express, Discover, RuPay, or Unknown), and validates the number using the Luhn checksum algorithm—all in a single, framework‑free page.
 
-## Demo
-Open `index.html` directly or serve the folder locally (recommended). Enter a test number and click **Validate Card**.
-
 ## Features
 - Live input formatting: groups digits in blocks of 4 automatically.
 - Card type detection by BIN/IIN ranges and length rules.
 - Luhn algorithm validation for checksum integrity.
 - Supports variable lengths (13–19) where appropriate.
-- Stylish dark UI with local custom fonts.
+- Stylish dark UI with custom fonts.
 - No external dependencies; easy to embed elsewhere.
 
 ## Supported Card Types & Rules
@@ -64,20 +61,6 @@ for (let i = number.length - 1; i >= 0; i--) {
 }
 ```
 
-## Usage
-1. Clone (or copy) the folder.
-2. Serve locally for best results:
-   - With Node:
-     ```
-     npx serve .
-     ```
-   - With Python:
-     ```
-     python -m http.server 8080
-     ```
-3. Visit `http://localhost:8080/card_Validator/` (or open `index.html`).
-4. Type/paste a test card number and click Validate.
-
 ## Test Numbers (Non‑Production)
 Use standard dummy numbers (they pass Luhn but are not real accounts):
 - Visa: `4111 1111 1111 1111`
@@ -95,28 +78,15 @@ if (len === 16 && prefix6 === '123456') return 'ExampleNet';
 ```
 Maintain ordering from most specific to generic to avoid false positives.
 
-## Security & Privacy Notes
-- This tool is for educational/demo purposes only.
-- Do NOT collect, log, or transmit real customer card numbers.
-- Avoid deploying it in production without PCI compliance considerations.
 
 ## Styling
 Custom fonts loaded with `@font-face` from `Assets/Fonts/`. Colors and theme variables centralized in `:root` for easy theming.
 
-## Browser Support
-Relies only on modern ES5+ features; works in current versions of major browsers.
-
-## Future Ideas
-- Add brand logo previews on detection.
-- Provide inline error hints (length, checksum, unsupported BIN).
-- Add unit tests for `luhnCheck` and `detectCardType`.
-- Include TypeScript variant.
-
 ## License
-Not yet specified. If reusing the logic, please credit the original author until a license is added.
+Not yet specified.
 
 ## Author
-Created by Vaibhav. Part of the broader portfolio project.
+Created by Vaibhav.
 
 ---
 Feel free to open an issue or suggest improvements.
