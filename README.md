@@ -2,6 +2,9 @@
 
 Lightweight vanilla JavaScript credit/debit card number validator and brand detector. It formats input as you type, identifies the card network (Visa, MasterCard, American Express, Discover, RuPay, or Unknown), and validates the number using the Luhn checksum algorithm—all in a single, framework‑free page.
 
+## Live Demo
+Access it here: https://vaibhavv1703.github.io/cardValidator/
+
 ## Features
 - Live input formatting: groups digits in blocks of 4 automatically.
 - Card type detection by BIN/IIN ranges and length rules.
